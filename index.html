@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click Counter</title>
+</head>
+<body>
+<script>
+    let clickCount = 0;
+
+    function showAlert() {
+        clickCount++;
+        alert("Number of clicks: " + clickCount);
+    }
+
+    function resetClickCount() {
+        clickCount = 0;
+    }
+
+    // Add event listener to detect keyboard button press
+    document.addEventListener('keydown', showAlert);
+
+    // Add event listener to detect page load
+    window.addEventListener('load', resetClickCount);
+</script>
+</body>
+</html>
